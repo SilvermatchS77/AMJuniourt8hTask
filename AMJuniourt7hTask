@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int timeOnLane = 10;
+        Console.WriteLine("Сколько людей в очереди??");
+        string sumPeopleString = Console.ReadLine();
+        int sumPeopleOnLane = Convert.ToInt32(sumPeopleString) * timeOnLane;
+        int minutesInHour = 60;
+        int hours = sumPeopleOnLane / minutesInHour;
+        int minutes = sumPeopleOnLane % minutesInHour;
+
+        Console.WriteLine("Вы должны отстоять в очереди {0} часа(ов) и {1} минут.", hours, minutes);
+    }
+}
