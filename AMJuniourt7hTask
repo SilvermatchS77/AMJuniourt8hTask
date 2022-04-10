@@ -9,9 +9,8 @@ class Program
         string sumPeopleString = Console.ReadLine();
         int sumPeopleOnLane = Convert.ToInt32(sumPeopleString) * timeOnLane;
         int minutesInHour = 60;
-        int hours = sumPeopleOnLane / minutesInHour;
-        int minutes = sumPeopleOnLane % minutesInHour;
-
-        Console.WriteLine("Вы должны отстоять в очереди {0} часа(ов) и {1} минут.", hours, minutes);
+        int waitingHours = sumPeopleOnLane / minutesInHour;
+        int waitingMinutes = sumPeopleOnLane % minutesInHour;
+        Console.WriteLine("Вы должны отстоять в очереди {0} часа(ов) и {1} минут.", waitingHours, waitingMinutes);
     }
 }
